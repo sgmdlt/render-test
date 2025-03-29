@@ -1,5 +1,5 @@
 install:
-	uv sync --system
+	uv pip install --system .
 
 build:
 	./build.sh
