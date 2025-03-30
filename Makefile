@@ -16,5 +16,8 @@ render-start:
 start-debug-local:
 	uv run .venv/bin/python -m gunicorn --chdir hexlet-code --reload --log-level debug task_manager.wsgi
 
+collectstatic-local:
+	.venv/bin/python hexlet-code/manage.py collectstatic
+
 lint:
 	uv run flake8 hexlet-code/task_manager
