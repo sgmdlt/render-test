@@ -5,13 +5,13 @@ build:
 	./build.sh
 
 collectstatic:
-	python hexlet-code/manage.py collectstatic --noinput
+	uv run hexlet-code/manage.py collectstatic --noinput
 
 migrate:
-	python hexlet-code/manage.py migrate
+	uv run hexlet-code/manage.py migrate
 
 render-start:
-	.venv/bin/python -m gunicorn --chdir hexlet-code task_manager.wsgi
+	gunicorn hexlet-code/task_manager.wsgi
 
 start-debug-local:
 	uv run .venv/bin/python -m gunicorn --chdir hexlet-code --reload --log-level debug task_manager.wsgi
