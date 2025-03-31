@@ -1,6 +1,7 @@
 {% load static %}
+{% load i18n %}
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -40,18 +41,18 @@
 
     <!-- Левая часть: заголовок -->
     <a href="/" class="d-flex align-items-center mb-2 mb-md-0 text-dark text-decoration-none">
-      <span class="fs-4">Менеджер задач</span>
+      <span class="fs-4">{% trans "Task Manager" %}</span>
     </a>
 
     <!-- Центр: кнопка "Пользователи" -->
     <ul class="nav mb-2 mb-md-0">
-      <li><a href="#" class="nav-link px-2 link-dark">Пользователи</a></li>
+      <li><a href="#" class="nav-link px-2 link-dark">{% trans "Users" %}</a></li>
     </ul>
 
     <!-- Правая часть: Вход и Регистрация -->
     <div class="text-end">
-      <button type="button" class="btn btn-outline-primary me-2">Вход</button>
-      <button type="button" class="btn btn-primary">Регистрация</button>
+      <button type="button" class="btn btn-outline-primary me-2">{% trans "Login" %}</button>
+      <button type="button" class="btn btn-primary">{% trans "Register" %}</button>
     </div>
 
   </header>
